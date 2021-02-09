@@ -1,8 +1,8 @@
 import React from 'react';
 
-import HomeHero from '../components/homeHero';
-import SkillsContainer from '../components/skillsContainer';
-import ButtonGroup from '../components/buttonGroup';
+import HomeHero from '../sections/homeHero';
+import SkillsContainer from '../sections/skillsContainer';
+import ButtonGroup from '../sections/buttonGroup';
 
 function HomePage() {
     const state = {

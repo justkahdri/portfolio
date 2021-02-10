@@ -12,7 +12,7 @@ const HomeHero = (props) => {
         buttons: [
             {
                 name: "Contact",
-                importance: "btn-outline-secondary",
+                importance: "btn-outline-light",
                 to_path: "/contact"
             },
             {

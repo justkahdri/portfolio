@@ -1,76 +1,53 @@
-/* Button Style 1 (Left Icons) */
-.icon-btn{
-    min-height:150px;
-    background:#f5f5f5;
-    float:left;
-}
-
-.icon-btn button{
-    float:left;
-    margin:10px;
-}
-
 .btn-gradient {
     width:40%;
     position: relative;
     display: inline-block;
-    left:-20px;
+    float: left;
     background: rgba(0, 0, 0, 0.15);
     border-top-right-radius: 60px;
     padding: 8px 24px 8px 16px;
-    box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+    box-shadow: 2px 0 0 0 rgba(78, 72, 72, 0.4);
 }
 
-.btn-green{
+#button-group .btn-block {
     font-size:23px;
-    padding:0px 20px;
-    color: #fff;
+    padding: 0;
+    color: var(--light);
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button-group .btn-block:hover {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.btn-green {
     background-color: #47a447;
-    border:none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width:230px;
 }
-
-.btn-pink{
-    font-size:23px;
-    padding:0px 20px;
-    color: #fff;
-    background-color: #f11350;
-    border:none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width:230px;
+.btn-green:hover {
+    background-color: #3a863a;
 }
 
 .btn-github{
-    font-size:23px;
-    padding:0px 20px;
-    color: #fff;
     background-color: #5a5a5a;
-    border:none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width:230px;
+}
+.btn-github:hover {
+    background-color: #4a4a4a;
 }
 
 .btn-linkedin{
-    font-size:23px;
-    padding:0px 20px;
-    color: #fff;
     background-color: #0074af;
-    border:none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width:230px;
+}
+
+.btn-linkedin:hover{
+    background-color: #005e8c;
 }
 
 .btn-text{
-    width:60%;
+    width: 60%;
+    text-align: center;
 }
 
 .btn-gradient i{

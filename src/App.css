@@ -3,7 +3,7 @@
   height: 10vh;
   max-height: 50px;
   text-transform: uppercase;
-  font-family: Nunito, sans-serif;
+  font-family: Nunito, var(--font-family-sans-serif);
 }
 
 .no-underline:hover {
@@ -30,9 +30,9 @@
   transition-property: top, right, bottom, left;
 }
 
-.btn-outline-secondary.hvr-outline-out:before,
-.btn-secondary.hvr-outline-out:before {
-  border-color: var(--secondary);
+.btn-outline-light.hvr-outline-out:before,
+.btn-light.hvr-outline-out:before {
+  border-color: var(--light);
 }
 .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
   top: -8px;

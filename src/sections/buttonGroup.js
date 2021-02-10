@@ -6,18 +6,21 @@ const ButtonGroup = () => {
     const buttons = [
         {
             title: "Github",
-            icon: "fa-github",
-            btn: "btn-github"
+            icon: "fab fa-github",
+            btn: "btn-github",
+            href: "https://github.com/justkahdri"
         },
         {
             title: "LinkedIn",
-            icon: "fa-linkedin",
-            btn: "btn-linkedin"
+            icon: "fab fa-linkedin-in",
+            btn: "btn-linkedin",
+            href: "https://www.linkedin.com/in/joaquin-montes/"
         },
         {
             title: "Blog",
-            icon: "fa-github",
-            btn: "btn-green"
+            icon: "fas fa-paragraph",
+            btn: "btn-green",
+            href: "/blog"
         }
     ];
 
@@ -28,13 +31,13 @@ const ButtonGroup = () => {
                     // <div className="col">
                     //     <button type="button" className="btn hvr-outline-out btn-secondary btn-block">{b.title}</button>
                     // </div>
-                    <div className="my-1 col-md">
-                        <button className={"btn-block " + b.btn}>
+                    <div className="my-2 my-md-0 col-md">
+                        <a className={"btn-block " + b.btn} href={b.href} target="_blank" rel="noreferrer">
                             <span className="btn-gradient">
-                                <i className={"fa " + b.icon}/>
+                                <i className={b.icon}/>
                             </span>
                             <span className="btn-text">{b.title}</span>
-                        </button>
+                        </a>
                     </div>
                 ))}
             </div>

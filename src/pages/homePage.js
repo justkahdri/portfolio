@@ -26,7 +26,7 @@ function HomePage(props) {
             <Header currentPath={props.location.pathname}/>
             <HomeHero {...state.firstSection}/>
             <SkillsContainer {...state.secondSection}/>
-            <hr className="featurette-divider container"/>
+            <hr className="featurette-divider w-75" />
             <ButtonGroup />
         </div>
     )

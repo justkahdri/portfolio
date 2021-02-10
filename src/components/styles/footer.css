@@ -1,11 +1,11 @@
 /* TO TOP ANIMATION */
 
 .to-top{
-    color:white;
-    padding-top:1.8em;
+    color:var(--light);
+    padding-right:1.8em;
     display:inline-block;
     position:relative;
-    border-color:white;
+    border-color:var(--light);
     text-decoration:none;
     transition:all .3s ease-out;
 }
@@ -13,20 +13,21 @@
     content:'▲';
     font-size:.9em;
     position:absolute;
-    top:0;
-    left:50%;
+    top:10%;
+    right:0;
     margin-left:-.7em;
-    border:solid .13em white;
+    border:solid .13em var(--light);
     border-radius:10em;
     width:1.4em;
     height:1.4em;
     line-height:1.3em;
-    transition:transform .5s ease-in;
+    transition:transform .2s ease-in;
 }
 .to-top:hover{
     color: var(--primary);
     border-color: var(--primary);
 }
 .to-top:hover:before{
+    border-color: var(--primary);
     transform: rotate(360deg);
 }

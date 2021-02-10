@@ -1,0 +1,81 @@
+/* Button Style 1 (Left Icons) */
+.icon-btn{
+    min-height:150px;
+    background:#f5f5f5;
+    float:left;
+}
+
+.icon-btn button{
+    float:left;
+    margin:10px;
+}
+
+.btn-gradient {
+    width:40%;
+    position: relative;
+    display: inline-block;
+    left:-20px;
+    background: rgba(0, 0, 0, 0.15);
+    border-top-right-radius: 60px;
+    padding: 8px 24px 8px 16px;
+    box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+}
+
+.btn-green{
+    font-size:23px;
+    padding:0px 20px;
+    color: #fff;
+    background-color: #47a447;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:230px;
+}
+
+.btn-pink{
+    font-size:23px;
+    padding:0px 20px;
+    color: #fff;
+    background-color: #f11350;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:230px;
+}
+
+.btn-github{
+    font-size:23px;
+    padding:0px 20px;
+    color: #fff;
+    background-color: #5a5a5a;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:230px;
+}
+
+.btn-linkedin{
+    font-size:23px;
+    padding:0px 20px;
+    color: #fff;
+    background-color: #0074af;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width:230px;
+}
+
+.btn-text{
+    width:60%;
+}
+
+.btn-gradient i{
+    font-size:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

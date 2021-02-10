@@ -1,3 +1,5 @@
+/* TO TOP ANIMATION */
+
 .to-top{
     color:white;
     padding-top:1.8em;
@@ -22,8 +24,8 @@
     transition:transform .5s ease-in;
 }
 .to-top:hover{
-    color:pink;
-    border-color:pink;
+    color: var(--primary);
+    border-color: var(--primary);
 }
 .to-top:hover:before{
     transform: rotate(360deg);

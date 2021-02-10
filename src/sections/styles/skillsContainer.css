@@ -1,0 +1,20 @@
+#skills .row > * {
+    margin-top: 30px;
+}
+
+#skills .row .badge {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+}
+
+#skills-gallery img {
+    width: 100%;
+    padding: 4px;
+    object-fit: contain;
+}
+
+#skills-gallery h5 {
+    white-space: normal;
+}

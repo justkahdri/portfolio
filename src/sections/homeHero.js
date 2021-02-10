@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/homehero.css';
 import background from '../assets/images/studio.jpg';
@@ -6,36 +7,48 @@ import background from '../assets/images/studio.jpg';
 import Arrow from '../components/arrowAnimation';
 
 const HomeHero = (props) => {
+    const cta = {
+        default_style: "btn btn-large hvr-outline-out btn-block ",
+        buttons: [
+            {
+                name: "Contact",
+                importance: "btn-outline-secondary",
+                to_path: "/contact"
+            },
+            {
+                name: "View Projects",
+                importance: "btn-primary",
+                to_path: "/projects"
+            }
+        ]
+
+    }
     return (
         <main id="hero" className="container-fluid text-center bg-light">
-                <img className="img-fluid" src={background} alt="Hero Background"/>
+            <img className="bg-cover" src={background} alt="Hero Background"/>
 
-                <div className="overlay">
-                        <section id="hero--top">
-                            <h1>{props.title}</h1>
-                            <h3>{props.subtitle}</h3>
-                            <p id="about" className="d-none d-md-block">
-                                I'm a self-taught Software Engineer looking for a job where I can collaborate
-                                within a team as a Junior Developer. My main objective is to accelerate my
-                                learning path across technology.
-                            </p>
-                        </section>
+            <div className="overlay">
+                    <section id="hero--top">
+                        <h3>{props.subtitle}</h3>
+                        <h1>{props.title}</h1>
+                        <p id="about" className="d-none d-md-block">{props.description}</p>
+                    </section>
 
-                        <section id="hero--middle" className="row justify-content-center">
-                            <div className="col col-md-4">
-                                <button className="btn hvr-outline-out btn-block btn-secondary">Contact</button>
+                    <section id="hero--middle" className="row justify-content-center">
+                        {cta.buttons.map(btn => (
+                            <div key={btn.name} className="col col-md-4">
+                                <Link to={btn.to_path} className="no-underline">
+                                    <button className={cta.default_style + btn.importance}>{btn.name}</button>
+                                </Link>
                             </div>
-                            <div className="col col-md-4">
-                                <button className="btn hvr-outline-out btn-block btn-primary">View Projects</button>
-                            </div>
-                        </section>
+                            ))}
+                    </section>
 
-
-                        <section id="hero--bottom">
-                            <a href="#skills">
-                                <Arrow />
-                            </a>
-                        </section>
+                    <section id="hero--bottom">
+                        <a href="#skills">
+                            <Arrow />
+                        </a>
+                    </section>
                 </div>
         </main>
     );

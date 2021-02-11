@@ -2,27 +2,7 @@ import React from 'react';
 
 import './styles/buttongroup.css';
 
-const ButtonGroup = () => {
-    const buttons = [
-        {
-            title: "Github",
-            icon: "fab fa-github",
-            btn: "btn-github",
-            href: "https://github.com/justkahdri"
-        },
-        {
-            title: "LinkedIn",
-            icon: "fab fa-linkedin-in",
-            btn: "btn-linkedin",
-            href: "https://www.linkedin.com/in/joaquin-montes/"
-        },
-        {
-            title: "Blog",
-            icon: "fas fa-paragraph",
-            btn: "btn-green",
-            href: "/blog"
-        }
-    ];
+const ButtonGroup = ({buttons}) => {
 
     return (
         <section id="button-group" className="container py-5">

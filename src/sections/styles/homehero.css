@@ -5,7 +5,7 @@
     position: relative;
 }
 #hero .overlay {
-    padding-top: 56px;
+    padding-top: var(--header-height);
     position: absolute;
     top: 0;
     bottom: 0;

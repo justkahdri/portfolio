@@ -24,17 +24,17 @@ const HomeHero = (props) => {
 
     }
     return (
-        <main id="hero" className="container-fluid text-center bg-light">
+        <section id="hero" className="container-fluid text-center bg-light">
             <img className="bg-cover" src={background} alt="Hero Background"/>
 
             <div className="overlay">
-                    <section id="hero--top">
+                    <article id="hero--top">
                         <h3>{props.subtitle}</h3>
                         <h1>{props.title}</h1>
                         <p id="about" className="d-none d-md-block">{props.description}</p>
-                    </section>
+                    </article>
 
-                    <section id="hero--middle" className="row justify-content-center">
+                    <article id="hero--middle" className="row justify-content-center">
                         {cta.buttons.map(btn => (
                             <div key={btn.name} className="col col-md-4">
                                 <Link to={btn.to_path} className="no-underline">
@@ -42,15 +42,15 @@ const HomeHero = (props) => {
                                 </Link>
                             </div>
                             ))}
-                    </section>
+                    </article>
 
-                    <section id="hero--bottom">
+                    <div id="hero--bottom">
                         <a href="#skills">
                             <Arrow />
                         </a>
-                    </section>
+                    </div>
                 </div>
-        </main>
+        </section>
     );
 }
 export default HomeHero;

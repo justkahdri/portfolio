@@ -3,9 +3,9 @@ import React from 'react';
 import HomeHero from '../sections/homeHero';
 import SkillsContainer from '../sections/skillsContainer';
 import ButtonGroup from '../sections/buttonGroup';
-import Header from "../components/header";
+import Header from "../components/Header";
 import skillsList from "../assets/badges/data.json";
-import Skill from "../components/skill";
+import Skill from "../components/Skill";
 
 function HomePage(props) {
     const state = {

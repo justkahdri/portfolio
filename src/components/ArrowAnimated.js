@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/arrowanimation.css';
 
-const Arrow = () => (
+const ArrowAnimated = () => (
     <svg id="more-arrows">
         <polygon className="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
         <polygon className="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
@@ -10,4 +10,4 @@ const Arrow = () => (
     </svg>
 )
 
-export default Arrow;
+export default ArrowAnimated;

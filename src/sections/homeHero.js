@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/homehero.css';
 import background from '../assets/images/studio.jpg';
 
-import Arrow from '../components/arrowAnimation';
+import ArrowAnimated from '../components/ArrowAnimated';
 
 const HomeHero = (props) => {
     const cta = {
@@ -46,7 +46,7 @@ const HomeHero = (props) => {
 
                     <div id="hero--bottom">
                         <a href="#skills">
-                            <Arrow />
+                            <ArrowAnimated />
                         </a>
                     </div>
                 </div>

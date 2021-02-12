@@ -1,5 +1,7 @@
 import React from 'react';
 
+// <a href='https://www.freepik.com/vectors/business'>Business vector created by freepik - www.freepik.com</a>
+
 const Attributions = ({content}) => (
     <article id="attributions" className="bg-dark">
         <div className="container py-2">

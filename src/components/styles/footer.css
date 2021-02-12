@@ -2,7 +2,6 @@
 
 .to-top{
     color:var(--light);
-    padding-right:1.8em;
     display:inline-block;
     position:relative;
     border-color:var(--light);
@@ -13,8 +12,7 @@
     content:'▲';
     font-size:.9em;
     position:absolute;
-    top:10%;
-    right:0;
+    right:-10px;
     margin-left:-.7em;
     border:solid .13em var(--light);
     border-radius:10em;
@@ -25,7 +23,6 @@
 }
 .to-top:hover{
     color: var(--primary);
-    border-color: var(--primary);
 }
 .to-top:hover:before{
     border-color: var(--primary);

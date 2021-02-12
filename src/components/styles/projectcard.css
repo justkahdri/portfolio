@@ -1,0 +1,25 @@
+#project--card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform .4s; /* Animation */
+    height: 100%;
+}
+
+#project--card:hover {
+    transform: scale(1.05);
+}
+
+i {
+    align-self: center;
+}
+
+#card--content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#card--tag {
+    margin-top: auto;
+}

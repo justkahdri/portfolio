@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from "../components/header";
+import Header from "../components/Header";
 import ProjectsGallery from "../sections/projectsGallery";
-import Project from "../components/project";
+import ProjectCard from "../components/ProjectCard";
 
 import projectsList from '../assets/projects/data.json';
 
@@ -20,7 +20,7 @@ function ProjectsPage(props) {
             <main role="main" id="projects-page">
                 <ProjectsGallery {...state.gallery}>
                     {Object.entries(projectsList).map(([name, values], idx) => (
-                        <Project key={idx} id={name} {...values} ctx={state.thumbnail_ctx}/>
+                        <ProjectCard key={idx} id={name} data={values} ctx={state.thumbnail_ctx}/>
                     ))}
                 </ProjectsGallery>
             </main>

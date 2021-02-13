@@ -10,14 +10,14 @@ import StyledButtons from "../molecules/StyledButtons";
 const HomeHero = (props) => {
     const middle_buttons = [
         {
-            name: "Contact",
+            title: "Contact",
             importance: "btn-outline-light",
-            to_path: "/contact"
+            href: "/contact"
         },
         {
-            name: "View Projects",
+            title: "View Projects",
             importance: "btn-primary",
-            to_path: "/projects"
+            href: "/projects"
         }
     ];
 

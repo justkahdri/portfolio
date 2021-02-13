@@ -2,7 +2,7 @@ import React from 'react';
 
 import HomeHero from '../UI/organisms/homeHero';
 import SkillsContainer from '../UI/organisms/skillsContainer';
-import ButtonGroup from '../UI/organisms/buttonGroup';
+import IconButtons from '../UI/molecules/IconButtons';
 import Header from "../UI/organisms/Header";
 import skillsList from "../../assets/badges/data.json";
 import Skill from "../UI/molecules/Skill";
@@ -27,19 +27,19 @@ function HomePage(props) {
                 {
                     title: "Github",
                     icon: "fab fa-github",
-                    btn: "btn-icon btn-github",
+                    custom: "btn-icon btn-github",
                     href: "https://github.com/justkahdri"
                 },
                 {
                     title: "LinkedIn",
                     icon: "fab fa-linkedin-in",
-                    btn: "btn-icon btn-linkedin",
+                    custom: "btn-icon btn-linkedin",
                     href: "https://www.linkedin.com/in/joaquin-montes/"
                 },
                 {
                     title: "Blog",
                     icon: "fas fa-paragraph",
-                    btn: "btn-icon btn-green",
+                    custom: "btn-icon btn-green",
                     href: "/blog"
                 }
             ]
@@ -57,7 +57,7 @@ function HomePage(props) {
                     ))}
                 </SkillsContainer>
                 <hr className="featurette-divider w-75 mb-5" />
-                <ButtonGroup {...state.thirdSection}/>
+                <IconButtons {...state.thirdSection}/>
             </main>
         </React.Fragment>
     )

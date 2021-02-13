@@ -1,4 +1,5 @@
 #two--buttons .btn-large {
+    line-height: 2.2;
     min-height: 38px;
     height: 10vh;
     max-height: 50px;
@@ -6,9 +7,6 @@
     font-family: Nunito, var(--font-family-sans-serif);
 }
 
-.no-underline:hover {
-    text-decoration: none;
-}
 .hvr-outline-out {
     display: inline-block;
     vertical-align: middle;

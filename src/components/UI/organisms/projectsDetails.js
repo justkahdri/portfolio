@@ -4,7 +4,7 @@ import CenteredTitle from "../atoms/CenteredTitle";
 import MainArticle from "../molecules/MainArticle";
 import ArticleListing from "../molecules/ArticleListing";
 import AsymmetricImage from "../atoms/AsymmetricGallery";
-import ButtonGroup from "./buttonGroup";
+import IconButtons from "../molecules/IconButtons";
 
 import './styles/projectdetails.css';
 
@@ -17,14 +17,14 @@ const ProjectDetails = (props) => {
         text: c.introduction,
         buttons: [
             {
-                name: "See code",
+                title: "See code",
                 importance: "btn-outline-light",
-                to_path: "https://github.com/justkahdri/mockconference"
+                href: "https://github.com/justkahdri/mockconference"
             },
             {
-                name: "Go to Demo",
+                title: "Go to Demo",
                 importance: "btn-primary",
-                to_path: "https://justkahdri.github.io/mockconference/"
+                href: "https://justkahdri.github.io/mockconference/"
             }
         ],
     }
@@ -41,17 +41,17 @@ const ProjectDetails = (props) => {
         buttons: [
             {
                 title: "See code",
-                btn: "btn btn-outline-primary",
+                custom: "btn btn-outline-primary",
                 href: "https://github.com/justkahdri/mockconference"
             },
             {
                 title: "Go to Demo",
-                btn: "btn btn-primary",
+                custom: "btn btn-primary",
                 href: "https://justkahdri.github.io/mockconference/"
             },
             {
                 title: "Other projects",
-                btn: "btn btn-outline-secondary",
+                custom: "btn btn-outline-secondary",
                 href: "/projects"
             }
         ]
@@ -77,7 +77,7 @@ const ProjectDetails = (props) => {
                 <article className="text-center py-2">
                         <h2>{btn_group.title}</h2>
                 </article>
-                <ButtonGroup buttons={btn_group.buttons}/>
+                <IconButtons buttons={btn_group.buttons}/>
             </div>
         </section>
     );

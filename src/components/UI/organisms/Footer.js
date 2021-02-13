@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/footer.css';
 
-import Cafecito from "./Cafecito";
+import Cafecito from "../atoms/Cafecito";
 
 const Footer = () => {
     function topFunction() {

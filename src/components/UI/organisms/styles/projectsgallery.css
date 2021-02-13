@@ -1,10 +1,10 @@
 #projects--gallery {
     padding-top: var(--header-height);
     min-height: calc(100vh - 56px);
-    background: url('../../assets/images/vertical-bg.jpg');
+    background: url('../../../../assets/images/vertical-bg.jpg');
     background-size: 100vw;
 }
 
-#gallery--title {
+#projects--gallery #centered--title {
     background: rgba(0, 0, 0, 0.5);
 }

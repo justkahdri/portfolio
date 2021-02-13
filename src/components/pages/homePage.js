@@ -1,11 +1,11 @@
 import React from 'react';
 
-import HomeHero from '../sections/homeHero';
-import SkillsContainer from '../sections/skillsContainer';
-import ButtonGroup from '../sections/buttonGroup';
-import Header from "../components/Header";
-import skillsList from "../assets/badges/data.json";
-import Skill from "../components/Skill";
+import HomeHero from '../UI/organisms/homeHero';
+import SkillsContainer from '../UI/organisms/skillsContainer';
+import ButtonGroup from '../UI/organisms/buttonGroup';
+import Header from "../UI/organisms/Header";
+import skillsList from "../../assets/badges/data.json";
+import Skill from "../UI/molecules/Skill";
 
 function HomePage(props) {
     const state = {
@@ -20,26 +20,26 @@ function HomePage(props) {
         },
         secondSection: {
             title: "Skills and Tools",
-            skillCtx: require.context('../assets/badges'),
+            skillCtx: require.context('../../assets/badges'),
         },
         thirdSection: {
             buttons: [
                 {
                     title: "Github",
                     icon: "fab fa-github",
-                    btn: "btn-github",
+                    btn: "btn-icon btn-github",
                     href: "https://github.com/justkahdri"
                 },
                 {
                     title: "LinkedIn",
                     icon: "fab fa-linkedin-in",
-                    btn: "btn-linkedin",
+                    btn: "btn-icon btn-linkedin",
                     href: "https://www.linkedin.com/in/joaquin-montes/"
                 },
                 {
                     title: "Blog",
                     icon: "fas fa-paragraph",
-                    btn: "btn-green",
+                    btn: "btn-icon btn-green",
                     href: "/blog"
                 }
             ]
@@ -53,10 +53,10 @@ function HomePage(props) {
                 <HomeHero {...state.firstSection}/>
                 <SkillsContainer {...state.secondSection}>
                     {Object.entries(skillsList).map(([name, path], idx) => (
-                        <Skill index={idx} name={name} path={path} ctx={state.secondSection.skillCtx} />
+                        <Skill key={idx} name={name} path={path} ctx={state.secondSection.skillCtx} />
                     ))}
                 </SkillsContainer>
-                <hr className="featurette-divider w-75" />
+                <hr className="featurette-divider w-75 mb-5" />
                 <ButtonGroup {...state.thirdSection}/>
             </main>
         </React.Fragment>

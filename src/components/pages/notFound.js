@@ -1,5 +1,5 @@
 import React from 'react';
-import not_found from '../assets/images/404.svg';
+import not_found from '../../assets/images/404.svg';
 
 function NotFound() {
     return (

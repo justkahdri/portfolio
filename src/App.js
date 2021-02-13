@@ -3,13 +3,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
-import Layout from "./components/Layout";
-import HomePage from "./pages/homePage";
-import ContactPage from "./pages/contactPage";
-import ProjectsPage from "./pages/projectsPage";
-import ProjectDetails from "./pages/projectsDetails";
-import BlogPage from "./pages/blogPage";
-import NotFound from './pages/notFound';
+import Layout from "./components/templates/Layout";
+import HomePage from "./components/pages/homePage";
+import ContactPage from "./components/pages/contactPage";
+import ProjectsPage from "./components/pages/projectsPage";
+import BlogPage from "./components/pages/blogPage";
+import NotFound from './components/pages/notFound';
 
 function App() {
     return (
@@ -18,8 +17,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={HomePage} />
                     <Route exact path='/contact' component={ContactPage} />
-                    <Route exact path='/projects' component={ProjectsPage} />
-                    <Route exact path='/projects/:projectId' component={ProjectDetails} />
+                    <Route path='/projects' component={ProjectsPage} />
                     <Route exact path='/blog' component={BlogPage} />
                     <Route exact path='/blog/:postId' component={undefined} />
                     <Route component={NotFound} />

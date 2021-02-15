@@ -7,7 +7,7 @@ import ExternalLink from "../atoms/ExternalLink";
 import InnerLink from "../atoms/InnerLink";
 
 const IconButtons = ({buttons}) => (
-    <section id="button-group" className="container pb-5">
+    <section id="button-group" className="container mb-5 py-2">
         <div className="row justify-content-between">
             {buttons.map((btn, idx) => (
                 <div key={idx} className="my-2 my-md-0 col-md">

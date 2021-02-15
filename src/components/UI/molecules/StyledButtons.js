@@ -11,11 +11,11 @@ const StyledButtons = props => {
     return (
         <div id="two--buttons" className="row justify-content-center">
             {props.buttons.map((btn, idx) => (
-                <div key={idx} className={"col " + props.custom}>
+                <div key={idx} className={"col-12 mb-2 mb-md-0 col-md " + props.custom}>
                     {btn.href.includes('.') ?
-                        <ExternalLink custom={default_style + btn.importance} {...btn}/>
+                        <ExternalLink {...btn} custom={default_style + btn.custom} />
                         :
-                        <InnerLink custom={default_style + btn.importance} {...btn}/>
+                        <InnerLink {...btn} custom={default_style + btn.custom} />
                     }
                 </div>
             ))}

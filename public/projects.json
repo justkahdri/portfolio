@@ -1,0 +1,127 @@
+{
+  "mock-conference": {
+    "title": "Völks Conference",
+    "description": "A project for a Bootstrap course that I did at Platzi. I improved and transformed it into a multilingual page using React.",
+    "thumbnail": "./mock-conference.png",
+    "technologies": {
+      "React": "badge-info",
+      "Bootstrap":  "badge-success"
+    },
+    "category": "Single Page App",
+    "date": "January 2021",
+    "introduction": [
+      "This was a project for a Bootstrap course that I did at Platzi. I improved and transformed it into a multilingual page using React.",
+      "It consist in a simple single-page app focused in styling and design. The page shows a fake brand that organizes a virtual conference in 2025."],
+    "learned": {
+      "p": ["Doing this app I learned to use Bootstrap and deepen previously acquired knowledge of React. Additionally, making some of the features I learned several concepts and libraries:"],
+      "l": ["Scrollspy", "React Hooks", "I18NEXT and translations with React"]
+    },
+    "repository": "https://github.com/justkahdri/mockconference",
+    "demo": "https://justkahdri.github.io/mockconference/",
+    "screenshots": [{
+      "source": "./mock-conference/preview.gif",
+      "alt": "Project Preview"
+    }],
+    "attribution": ["Work Vector made by stories - www.freepik.es", "https://www.freepik.es/vectores/trabajo"]
+  },
+
+  "files-organizer": {
+    "title": "Files Organizer",
+    "description": "An App that checks and manages the Downloads folder in a windows computer. It can stay running on the background.",
+    "thumbnail": "./files-organizer.jpg",
+    "technologies": {
+      "Python": "badge-primary",
+      "QT":  "badge-primary"
+    },
+    "category": "Desktop App",
+    "date": "December 2020",
+    "introduction": [
+      "This is the first desktop application that I made. I started doing it with a friend so we learned to work together with Git and Github.",
+      "Checks and manages the Downloads folder in a windows computer, it can stay running on the background and deploys a system tray icon.",
+      "The methodology is simple, the program reads the extensions from the files in the current folder (Downloads Folder by default) and groups them depending on their types to move them to their correspondent folders."],
+    "learned": {
+      "p": ["This project introduce me on User Interfaces, but in the meantime it also taught me some other things:"],
+      "l": ["Managing json and csv files", "Threading in Python", "Coworking using Git"]
+    },
+    "repository": "https://github.com/justkahdri/files_organizer",
+    "download": "https://github.com/justkahdri/files_organizer/archive/v1.2.zip",
+    "screenshots": [
+      {
+        "source": "./files-organizer/tray.png",
+        "alt": "Tray Icon",
+        "caption": "Enables some basic actions with the app minimized."
+      },
+      {
+        "source": "./files-organizer/app.png",
+        "alt": "Desktop App",
+        "caption": "Basic GUI made with PyQT."
+      }
+    ],
+    "attribution": ["Computer vector created by stories - www.freepik.com", "https://www.freepik.com/vectors/computer"]
+  },
+
+  "adomi": {
+    "title": "ADOMI",
+    "description": "Analysis of Data Obtained by a Measurement Instrument.",
+    "thumbnail": "./adomi.png",
+    "technologies": {
+      "Python": "badge-primary"
+    },
+    "category": "Data Analysis",
+    "date": "November 2020",
+    "introduction": [
+      "This is a small project named ADOMI (Analysis of Data Obtained by a Measurement Instrument). It was made for a python course where I participated in November 2020. It was developed managing libraries like pandas, scipy, matplotlib, etc.",
+      "The algorithm reads a .xlsx file and returns a graph with some extra analysis."],
+    "learned": {
+      "p": ["This is a final project for a course at ITBA (Buenos Aires National Institute) . With this project I learned a lot about functional programming, Python and Data Analysis. I improved my code, making it more clean and understandable."],
+      "l": []
+    },
+    "repository": "https://github.com/justkahdri/ADOMI",
+    "screenshots": [
+      {
+        "alt": "project preview",
+        "source": "./adomi/video.gif"
+      },
+      {
+        "source": "./adomi/results.png",
+        "alt": "Console Results",
+        "caption": "Output of the initial data. It can be saved in a '.txt' file."
+      },
+      {
+        "source": "./adomi/document.png",
+        "alt": "Raw Data",
+        "caption": "In this case it is extracted from an excel."
+      },
+      {
+        "source": "./adomi/ECG.png",
+        "alt": "Output Graphic",
+        "caption": "Made from raw data with Matplotlib."
+      }
+    ],
+    "attribution": ["Work vector created by stories - www.freepik.com", "https://www.freepik.com/vectors/work"]
+  },
+
+  "calculatorha": {
+    "title": "Calculator HA",
+    "description": "Online calculator specialized in concrete structures.",
+    "thumbnail": "./calculatorha.jpg",
+    "technologies": {
+      "HTML": "badge-danger",
+      "CSS":  "badge-info",
+      "JS": "badge-warning"
+    },
+    "category": "Single Page App",
+    "date": "June 2020",
+    "introduction": [
+      "Some calculations in high school were very repetitive so I decided to create this little calculator that makes the pre-dimensioning of concrete structures much faster.",
+      "The program calculates the final dimensions from the input data and keeps a history of the past calculus on the right side of the page."
+    ],
+    "learned": {
+      "p": ["This project helped me with some basic concepts in coding and to develop my skills in web development:"],
+      "l": ["Web development with semantic HTML", "Styles management in CSS with Grid Layout Responsive Design", "Code in JS \"vanilla\" using classes & functions"]
+    },
+    "repository": "https://github.com/justkahdri/CalculatorHA",
+    "demo": "https://justkahdri.github.io/CalculatorHA/",
+    "attribution": ["Business vector created by vectorpocket - www.freepik.com", "https://www.freepik.com/vectors/business"]
+  }
+}

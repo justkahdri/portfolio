@@ -1,41 +1,57 @@
-import React from 'react';
-import _ from 'lodash';
+import React, {useEffect, useState} from 'react';
 
-import Header from "../UI/organisms/Header";
 import ProjectsGallery from "../UI/organisms/projectsGallery";
 import ProjectCard from "../UI/molecules/ProjectCard";
-import ProjectDetails from "../UI/organisms/projectsDetails";
+import Loader from "../UI/atoms/Loader";
 
-import projectsList from '../../assets/projects/data.json';
+function ProjectsPage() {
+    const [state, setState] = useState({
+        loading: true,
+        error: null,
+        title: "My Personal Projects",
+        thumbnail_ctx: require.context('../../assets/projects'),
+    })
 
-function ProjectsPage(props) {
-    const state = {
-        gallery: {
-            title: "My Personal Projects",
+    const [projectsData,setProjectsData]=useState([]);
 
-        },
-        thumbnail_ctx: require.context('../../assets/projects', true),
-        sub_path: props.location.pathname.split('/').slice(-1).pop(),
-
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
+
+    useEffect(() => {
+        const getData = () => {
+            fetch('/projects.json',
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    // console.log(response);
+                    return response.json();
+                })
+                .then(allProjects => {
+                    // console.log(allProjects);
+                    setProjectsData(allProjects);
+                })
+                .then(() => sleep(2000))
+                .then(() => setState({...state, loading: false}));
+        }
+
+        getData()
+    }, [state])
+
     return (
-        <React.Fragment>
-            <Header currentPath={props.location.pathname}/>
-            {state.sub_path === "projects" ?
-            // RETURNS Main Page
-                <main role="main" id="projects--page">
-                    <ProjectsGallery {...state.gallery}>
-                        {Object.entries(projectsList).map(([name, values], idx) => (
-                            <ProjectCard key={idx} id={name} data={values} ctx={state.thumbnail_ctx}/>
-                        ))}
-                    </ProjectsGallery>
-                </main>
+        state.loading ? <Loader/>
             :
-            // RETURNS Project Details
-                <main role="main" id="details--page">
-                    <ProjectDetails content={_.get(projectsList, state.sub_path)} ctx={state.thumbnail_ctx}/>
-                </main>}
-        </React.Fragment>
+            <main role="main" id="projects--page">
+                <ProjectsGallery title={state.title}>
+                    {Object.entries(projectsData).map(([name, values], idx) => (
+                        <ProjectCard key={idx} id={name} data={values} ctx={state.thumbnail_ctx}/>
+                    ))}
+                </ProjectsGallery>
+            </main>
     )
 }
 

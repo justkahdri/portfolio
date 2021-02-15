@@ -1,6 +1,6 @@
 #details--container {
     padding-top: var(--header-height);
     min-height: calc(100vh - 56px);
-    background: url('../../../../assets/images/vertical-bg.jpg');
+    background: url('../../../assets/images/white-background.jpg');
     background-size: 100vw;
 }

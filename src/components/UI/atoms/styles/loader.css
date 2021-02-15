@@ -1,0 +1,87 @@
+#loader {
+    padding-top: var(--header-height);
+    height: calc(100vh - 56px);
+    background: var(--primary);
+}
+
+#loader .dot {
+    border-radius: 50%;
+    position: absolute;
+}
+
+#loader .dot.delayed {
+    height: 40vh;
+    width: 40vh;
+    animation-delay: 3s !important;
+
+    background-color: var(--secondary);
+
+}
+
+#loader .dot.more-delayed {
+    height: 45vh;
+    width: 45vh;
+    animation-delay: 2.2s !important;
+    background-color: #218837;
+}
+
+#loader .loader--logo {
+    height: 35vh;
+    max-height: 60%;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--dark);
+}
+
+.breath {
+    -webkit-animation: breathing 5s ease-out infinite normal;
+    animation: breathing 4s ease-out infinite normal;
+}
+
+@-webkit-keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}

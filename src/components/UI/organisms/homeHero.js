@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import './styles/homehero.css';
 import background from '../../../assets/images/studio.jpg';
@@ -11,12 +10,12 @@ const HomeHero = (props) => {
     const middle_buttons = [
         {
             title: "Contact",
-            importance: "btn-outline-light",
+            custom: "btn-outline-light",
             href: "/contact"
         },
         {
             title: "View Projects",
-            importance: "btn-primary",
+            custom: "btn-primary",
             href: "/projects"
         }
     ];

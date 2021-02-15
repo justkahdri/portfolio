@@ -1,11 +1,8 @@
 import React from 'react';
 
-import Header from "../UI/organisms/Header";
-
-function ContactPage(props) {
+function ContactPage() {
     return (
         <div id="contact-page">
-            <Header currentPath={props.location.pathname}/>
             <h1>Contact Page</h1>
         </div>
     )

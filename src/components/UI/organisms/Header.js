@@ -1,18 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
-const Header = ({currentPath}) => {
+const Header = () => {
     const sections = {
         Projects: '/projects',
         Blog: '/blog',
         Contact: '/contact',
     };
+    const usePagePath = () => {
+        let location = useLocation();
+        return location.pathname;
+    }
 
+    // TODO Use Midnight and make dynamic header
     return (
         <header id="header" className="navbar navbar-expand-lg navbar-dark fixed-top justify-content-between">
             <div />
             <div className="container">
-                {currentPath === '/' ||
+                {usePagePath() === '/' ||
                 <Link className="navbar-brand" to="/">
                     Joaquín Montes
                 </Link>

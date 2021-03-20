@@ -1,0 +1,13 @@
+#landing--hero {
+    padding-top: var(--header-height);
+    min-height: calc(100vh - 56px);
+}
+
+#landing--hero h1 {
+    font-size:calc(2.5rem + 2.8vw);
+}
+
+#landing--hero h4 {
+    margin-bottom: 0;
+    font-size:calc(1.5rem + 1vw);
+}

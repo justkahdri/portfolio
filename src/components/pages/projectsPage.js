@@ -35,7 +35,7 @@ function ProjectsPage() {
                     // console.log(allProjects);
                     setProjectsData(allProjects);
                 })
-                .then(() => sleep(2000))
+                // .then(() => sleep(2000))
                 .then(() => setState({...state, loading: false}));
         }
 

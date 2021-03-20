@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import _ from 'lodash';
 
-import ProjectDetails from "../templates/projectsDetails";
+import DetailsContainer from "../templates/detailsContainer";
 import Loader from "../UI/atoms/Loader";
 
 function DetailsPage() {
@@ -39,8 +39,8 @@ function DetailsPage() {
         state.loading ? <Loader/>
             :
             <main role="main" id="details--page">
-                {console.log(projectId, projectContent, state.error)}
-                <ProjectDetails content={projectContent} ctx={project_ctx}/>
+                {/* {console.log(projectId, projectContent, state.error)} */}
+                <DetailsContainer content={projectContent} ctx={project_ctx}/>
             </main>
     )
 }

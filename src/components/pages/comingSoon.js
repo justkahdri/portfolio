@@ -1,24 +1,25 @@
 import React from 'react';
 
 import LandingHero from "../UI/molecules/LandingHero";
-import './styles/notfound.css';
+import './styles/comingsoon.css';
 
-function NotFound() {
+function ComingSoon() {
     const state = {
-        title: "This is not the page you are looking for...",
-        text: "That's impossible! Perhaps the archives are incomplete.",
+        title: "Oops! This page is not finished yet!",
+        text: "I'm currently working on this! While you wait, would you want to see my projects?",
+        text_custom: "col-10 offset-1",
         cta: {
             custom: "btn-primary",
-            href: "/",
-            title: "Move Along (Home)",
+            href: "/projects",
+            title: "Portfolio",
         }
     }
     // Coming Soon <a href='https://www.freepik.es/vectores/diseno'>Vector de Diseño creado por stories - www.freepik.es</a>
     return (
-        <main id="not-found">
+        <main id="coming-soon">
             <LandingHero {...state} />
         </main>
     )
 }
 
-export default NotFound;
+export default ComingSoon;

@@ -1,0 +1,4 @@
+#not-found #landing--hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../../assets/images/obiwan.jpg');
+    background-size: cover;
+}

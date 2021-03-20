@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import HomeHero from '../UI/organisms/homeHero';
+import HomeHero from '../UI/organisms/HomeHero';
 import SkillsContainer from '../UI/organisms/skillsContainer';
 import IconButtons from '../UI/molecules/IconButtons';
 import Skill from "../UI/molecules/Skill";

@@ -8,6 +8,7 @@ import ContactContainer from '../templates/contactContainer';
 function ContactPage() {
   const { register, handleSubmit, errors } = useForm();
   const [sent, setSent] = React.useState(false);
+  const [number, setNumber] = React.useState('');
   let location = useLocation();
 
   const onSubmit = data => {
@@ -17,19 +18,21 @@ function ContactPage() {
       last_name: data.lastName,
       content: data.message,
       email:data.email,
-      phone:data.phone,
+      phone:number,
     };
-    emailjs
-      .send("p_gmail", "portfolio_template", templateParams, "user_6kBQO5eAGRpWqpJAVWN0A")
-      .then(
-        function(response) {
-          console.log("SUCCESS!", response.status, response.text);
-          setSent(true);
-        },
-        function(err) {
-          console.log('ERROR', err);
-        }
-      );
+    // TODO set emailjs
+    console.log(templateParams);
+    // emailjs
+    //   .send("p_gmail", "portfolio_template", templateParams, "user_6kBQO5eAGRpWqpJAVWN0A")
+    //   .then(
+    //     function(response) {
+    //       console.log("SUCCESS!", response.status, response.text);
+    //       setSent(true);
+    //     },
+    //     function(err) {
+    //       console.log('ERROR', err);
+    //     }
+    //   );
   };
 
   return (
@@ -43,7 +46,7 @@ function ContactPage() {
         />
 
     : <main role="main" id="contact-page" className="container">
-        <ContactContainer register={register} handleSubmit={handleSubmit} errors={errors} onSubmit={onSubmit}/>
+        <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} getNumber={setNumber}/>
       </main>
   )
 }

@@ -19,7 +19,6 @@ function ContactPage() {
     sent: false,
     error: null,
     error_alert: {
-      importance: 'danger',
       strong: "We're sorry :(",
       message: 'An error ocurred while sending your message, try again later.'
     }

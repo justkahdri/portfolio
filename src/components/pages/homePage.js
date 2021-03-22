@@ -84,15 +84,16 @@ function HomePage() {
     return (
         state.loading ? <Loader/> :
             <main role="main" id="homepage">
-                <HomeHero {...state.firstSection}/>
-                {location.search === '?sent=success' && <Alert {...state.success_alert}/>}
-                <SkillsContainer {...state.secondSection}>
-                    {Object.entries(skillsList).map(([name, path], idx) => (
-                        <Skill key={idx} name={name} path={path} ctx={state.secondSection.skillCtx} />
-                    ))}
-                </SkillsContainer>
-                <hr className="featurette-divider w-75 mb-5" />
-                <IconButtons {...state.thirdSection}/>
+              <HomeHero {...state.firstSection}/>
+              {location.search === '?sent=success' && <Alert {...state.success_alert}/>}
+              {state.error && <Alert/>}
+              <SkillsContainer {...state.secondSection}>
+                  {Object.entries(skillsList).map(([name, path], idx) => (
+                      <Skill key={idx} name={name} path={path} ctx={state.secondSection.skillCtx} />
+                  ))}
+              </SkillsContainer>
+              <hr className="featurette-divider w-75 mb-5" />
+              <IconButtons {...state.thirdSection}/>
             </main>
     )
 }

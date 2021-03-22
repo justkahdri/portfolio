@@ -4,6 +4,7 @@ import _ from 'lodash';
 
 import DetailsContainer from "../templates/detailsContainer";
 import Loader from "../UI/atoms/Loader";
+import Alert from "../UI/atoms/Alert";
 
 function DetailsPage() {
     let { projectId } = useParams();
@@ -39,8 +40,9 @@ function DetailsPage() {
         state.loading ? <Loader/>
             :
             <main role="main" id="details--page">
-                {/* {console.log(projectId, projectContent, state.error)} */}
-                <DetailsContainer content={projectContent} ctx={project_ctx}/>
+              {state.error && <Alert/>}
+              {/* {console.log(projectId, projectContent, state.error)} */}
+              <DetailsContainer content={projectContent} ctx={project_ctx}/>
             </main>
     )
 }

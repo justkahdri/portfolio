@@ -9,6 +9,13 @@ import Alert from '../UI/atoms/Alert';
 function ContactPage() {
   const { register, handleSubmit, errors } = useForm();
   const [state, setState] = React.useState({
+    sideSection: {
+      title: "Get in Touch",
+      content: "Maybe your're looking for a profile like mine, or perhaps something you saw here caught your attention...",
+      cta: "Let me know!",
+      salute: "I'd love to hear from you."
+    },
+    number: '',
     sent: false,
     error: null,
     error_alert: {
@@ -17,7 +24,6 @@ function ContactPage() {
       message: 'An error ocurred while sending your message, try again later.'
     }
   });
-  const [number, setNumber] = React.useState('');
   let location = useLocation();
 
   const onSubmit = data => {
@@ -27,7 +33,7 @@ function ContactPage() {
       last_name: data.lastName,
       content: data.message,
       email: data.email,
-      phone: number,
+      phone: state.number,
     };
     emailjs
       .send("p_gmail", "portfolio_template", templateParams, process.env.REACT_APP_EMAILJS_ID)
@@ -55,7 +61,7 @@ function ContactPage() {
 
     : <main role="main" id="contact-page" className="container">
         {state.error && <Alert {...state.error_alert}/>}
-        <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} getNumber={setNumber}/>
+        <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} number={state.number} sideSection={state.sideSection}/>
       </main>
   )
 }

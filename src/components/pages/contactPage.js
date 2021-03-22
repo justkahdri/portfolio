@@ -4,10 +4,19 @@ import {useForm} from 'react-hook-form';
 import emailjs from 'emailjs-com';
 
 import ContactContainer from '../templates/contactContainer';
+import Alert from '../UI/atoms/Alert';
 
 function ContactPage() {
   const { register, handleSubmit, errors } = useForm();
-  const [sent, setSent] = React.useState(false);
+  const [state, setState] = React.useState({
+    sent: false,
+    error: null,
+    error_alert: {
+      importance: 'danger',
+      strong: "We're sorry :(",
+      message: 'An error ocurred while sending your message, try again later.'
+    }
+  });
   const [number, setNumber] = React.useState('');
   let location = useLocation();
 
@@ -17,26 +26,25 @@ function ContactPage() {
       first_name: data.firstName,
       last_name: data.lastName,
       content: data.message,
-      email:data.email,
-      phone:number,
+      email: data.email,
+      phone: number,
     };
-    // TODO set emailjs
-    console.log(templateParams);
-    // emailjs
-    //   .send("p_gmail", "portfolio_template", templateParams, "user_6kBQO5eAGRpWqpJAVWN0A")
-    //   .then(
-    //     function(response) {
-    //       console.log("SUCCESS!", response.status, response.text);
-    //       setSent(true);
-    //     },
-    //     function(err) {
-    //       console.log('ERROR', err);
-    //     }
-    //   );
+    emailjs
+      .send("p_gmail", "portfolio_template", templateParams, process.env.REACT_APP_EMAILJS_ID)
+      .then(
+        function(response) {
+          // console.log("SUCCESS!", response.status, response.text);
+          setState({...state, sent: true});
+        },
+        function(err) {
+          // console.log('ERROR', err);
+          setState({...state, error: err});
+        }
+      );
   };
 
   return (
-    sent
+    state.sent
       ? <Redirect
             push to={{
               pathname: "/",
@@ -46,6 +54,7 @@ function ContactPage() {
         />
 
     : <main role="main" id="contact-page" className="container">
+        {state.error && <Alert {...state.error_alert}/>}
         <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} getNumber={setNumber}/>
       </main>
   )

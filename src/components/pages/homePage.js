@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
+import {useLocation} from 'react-router-dom';
 
 import HomeHero from '../UI/organisms/HomeHero';
 import SkillsContainer from '../UI/organisms/skillsContainer';
 import IconButtons from '../UI/molecules/IconButtons';
 import Skill from "../UI/molecules/Skill";
 import Loader from "../UI/atoms/Loader";
+import Alert from '../UI/atoms/Alert';
 
 function HomePage() {
     const [state, setState] = useState({
@@ -44,10 +46,16 @@ function HomePage() {
                     href: "/blog"
                 }
             ]
+        },
+        success_alert: {
+          importance: 'primary',
+          strong: 'All done!',
+          message: 'Your message was sent succesfully!'
         }
     })
 
     const [ skillsList, setSkillsList ] = useState([]);
+    let location = useLocation()
 
 
     useEffect(() => {
@@ -77,6 +85,7 @@ function HomePage() {
         state.loading ? <Loader/> :
             <main role="main" id="homepage">
                 <HomeHero {...state.firstSection}/>
+                {location.search === '?sent=success' && <Alert {...state.success_alert}/>}
                 <SkillsContainer {...state.secondSection}>
                     {Object.entries(skillsList).map(([name, path], idx) => (
                         <Skill key={idx} name={name} path={path} ctx={state.secondSection.skillCtx} />

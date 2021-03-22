@@ -1,0 +1,7 @@
+#header.opacity {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#header.lighten {
+  background: rgba(254, 254, 254, 0.95);
+}

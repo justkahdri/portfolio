@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
+import './styles/header.css';
+
 const Header = () => {
     const sections = {
         Projects: '/projects',
@@ -10,11 +12,20 @@ const Header = () => {
     const usePagePath = () => {
         let location = useLocation();
         return location.pathname;
+    };
+    const getTheme = path => {
+      if(path === '/contact' || path.startsWith('/projects/')) {
+        return 'navbar-light lighten';
+      } else if (path === '/blog') {
+        return 'navbar-dark';
+      } else {
+        return 'navbar-dark opacity';
+      }
     }
 
-    // TODO Use Midnight and make dynamic header
+    // FIXME Use Midnight and make dynamic header
     return (
-        <header id="header" className="navbar navbar-expand-lg navbar-dark fixed-top justify-content-between">
+        <header id="header" className={"navbar navbar-expand-lg fixed-top justify-content-between " + getTheme(usePagePath())}>
             <div />
             <div className="container">
                 {usePagePath() === '/' ||

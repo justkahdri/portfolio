@@ -12,7 +12,6 @@ function DetailsPage() {
     const [projectContent,setProjectContent] = useState([]);
 
     // TODO function cleanup
-    // TODO error handling
     useEffect(() => {
         const getData = () => {
             fetch('/projects.json',
@@ -31,6 +30,7 @@ function DetailsPage() {
                     setProjectContent(_.get(allProjects, projectId));
                 })
                 .then(() => setState({loading: false, error: null}))
+                .catch(err => setState({loading: false, error: err}));
         }
 
         getData();

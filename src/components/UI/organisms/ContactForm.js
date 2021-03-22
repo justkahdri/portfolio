@@ -3,6 +3,7 @@ import React from 'react';
 import FormGroup from '../molecules/FormGroup';
 import PhoneInputGroup from '../molecules/PhoneInputGroup';
 import TextAreaGroup from '../molecules/TextAreaGroup';
+import StyledButtons from '../molecules/StyledButtons';
 
 const ContactForm = ({handleSubmit, register, errors, getNumber}) => {
   return (
@@ -15,8 +16,7 @@ const ContactForm = ({handleSubmit, register, errors, getNumber}) => {
         <FormGroup label='Email' name="email" register={register} ph="example@email.com" type="email" error={errors.email} required/>
         <PhoneInputGroup label='Phone' name="phone" handleChange={value => {getNumber(value)}}/>
         <TextAreaGroup label='Message' name="message" register={register} error={errors.message} ph="What would you like to chat about?"/>
-        <button type="submit" className="btn btn-primary">Submit →</button>
-        {/* TODO make button wider */}
+        <StyledButtons label="Submit →" submit/>
       </form>
     </article>
   );

@@ -60,7 +60,7 @@ function HomePage() {
 
     useEffect(() => {
         const getData = () => {
-            fetch('/skills.json',
+            fetch(process.env.REACT_APP_SKILLS,
                 {
                     headers: {
                         'Content-Type': 'application/json',

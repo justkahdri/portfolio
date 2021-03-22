@@ -14,7 +14,7 @@ function DetailsPage() {
     // TODO function cleanup
     useEffect(() => {
         const getData = () => {
-            fetch('/projects.json',
+            fetch(process.env.REACT_APP_PROJECTS,
                 {
                     headers: {
                         'Content-Type': 'application/json',

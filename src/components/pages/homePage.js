@@ -56,8 +56,7 @@ function HomePage() {
 
     const [ skillsList, setSkillsList ] = useState([]);
     let location = useLocation()
-
-
+    
     useEffect(() => {
         let isMounted = true;
         const getData = async () => {

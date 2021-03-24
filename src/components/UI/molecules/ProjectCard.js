@@ -11,7 +11,7 @@ const ProjectCard = (props) => {
         <article className="col-xl-4 col-md-6 mb-4">
             <div id="project--card" className="bg-white shadow-sm">
                 <Link to={`projects/${props.id}`}>
-                    <img id="thumbnail" src={props.ctx(data.thumbnail).default}
+                    <img id="thumbnail" src={data.thumbnail}
                          alt={data.title + " Thumbnail"} className="img-fluid" />
                 </Link>
                 <div id="card--content" className="p-4">

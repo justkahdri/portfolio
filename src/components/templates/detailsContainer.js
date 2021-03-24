@@ -9,7 +9,7 @@ import Carousel from "../UI/organisms/Carousel";
 
 import './styles/projectdetails.css';
 
-const DetailsContainer = ({content, ctx}) => {
+const DetailsContainer = ({content}) => {
     const buttons = [
         {
             title: "See code",
@@ -28,7 +28,7 @@ const DetailsContainer = ({content, ctx}) => {
         introduction: {
             title: "What is this?",
             subtitle: content.date,
-            image: ctx(content.thumbnail).default,
+            image: content.thumbnail,
             text: content.introduction,
             buttons: buttons,
         },
@@ -67,9 +67,9 @@ const DetailsContainer = ({content, ctx}) => {
                             https://stackoverflow.com/questions/33685259/stretch-and-fill-image-in-bootstrap-carousel */}
                         <h2 className="col-12 text-right">{state.gallery.title}</h2>
                         {content.screenshots.length === 1 ?
-                            <img src={ctx(content.screenshots[0].source).default} className="img-fluid" alt={content.screenshots[0].alt}/>
+                            <img src={content.screenshots[0].source} className="img-fluid" alt={content.screenshots[0].alt}/>
                             :
-                            <Carousel content={content.screenshots} ctx={ctx} custom="col-12"/>
+                            <Carousel content={content.screenshots} custom="col-12"/>
                         }
                     </article>
                 }

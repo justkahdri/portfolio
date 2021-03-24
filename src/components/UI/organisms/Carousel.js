@@ -2,14 +2,14 @@ import React from 'react';
 
 import './styles/carousel.css';
 
-const Carousel = ({content, ctx, custom}) => {
+const Carousel = ({content, custom}) => {
 
     return (
         <div id="projectCarousel" className={"carousel slide " + custom} data-ride="carousel">
             <div className="carousel-inner">
                 {Object.values(content).map((image, idx) => (
                     <div key={idx} className={"carousel-item" + (idx ? '' : ' active')}>
-                        <img src={ctx(image.source).default} className="d-block w-100" alt={image.alt}/>
+                        <img src={image.source} className="d-block w-100" alt={image.alt}/>
                     </div>
                 ))}
             </div>

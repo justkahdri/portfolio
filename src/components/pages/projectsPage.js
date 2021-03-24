@@ -10,14 +10,9 @@ function ProjectsPage() {
         loading: true,
         error: null,
         title: "My Personal Projects",
-        thumbnail_ctx: require.context('../../assets/projects'),
     })
 
     const [projectsData,setProjectsData]=useState([]);
-
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
 
     useEffect(() => {
         let isMounted = true;
@@ -53,7 +48,7 @@ function ProjectsPage() {
                 {state.error && <Alert/>}
                 <ProjectsGallery title={state.title}>
                     {Object.entries(projectsData).map(([name, values], idx) => (
-                        <ProjectCard key={idx} id={name} data={values} ctx={state.thumbnail_ctx}/>
+                        <ProjectCard key={idx} id={name} data={values}/>
                     ))}
                 </ProjectsGallery>
             </main>

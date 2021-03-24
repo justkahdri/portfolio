@@ -8,7 +8,6 @@ import Alert from "../UI/atoms/Alert";
 
 function DetailsPage() {
     let { projectId } = useParams();
-    const project_ctx = require.context('../../assets/projects', true);
     const [state, setState] = useState({loading: true, error: null});
     const [projectContent,setProjectContent] = useState([]);
 
@@ -44,7 +43,7 @@ function DetailsPage() {
             <main role="main" id="details--page">
               {state.error && <Alert/>}
               {/* {console.log(projectId, projectContent, state.error)} */}
-              <DetailsContainer content={projectContent} ctx={project_ctx}/>
+              <DetailsContainer content={projectContent}/>
             </main>
     )
 }

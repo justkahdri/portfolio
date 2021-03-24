@@ -20,27 +20,30 @@ function ProjectsPage() {
     }
 
     useEffect(() => {
-        const getData = () => {
-            fetch(process.env.REACT_APP_PROJECTS,
+        let isMounted = true;
+        const getData = async () => {
+          try {
+            const response = await fetch(process.env.REACT_APP_PROJECTS,
                 {
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     }
-                })
-                .then(response => {
-                    // console.log(response);
-                    return response.json();
-                })
-                .then(allProjects => {
-                    // console.log(allProjects);
-                    setProjectsData(allProjects);
-                })
-                // .then(() => sleep(2000))
-                .then(() => setState({...state, loading: false}));
+                });
+            if (isMounted) {
+                let parsedData = await response.json();
+                setProjectsData(parsedData);
+                setState({...state, loading: false, error: null});
+            }
+          } catch (err) {
+            setState({...state, loading: false, error: err});
+          }
         }
 
-        getData()
+        getData();
+        return () => {
+          isMounted = false;
+        };
     }, [state])
 
     return (

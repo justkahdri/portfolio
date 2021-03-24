@@ -59,26 +59,31 @@ function HomePage() {
 
 
     useEffect(() => {
-        const getData = () => {
-            fetch(process.env.REACT_APP_SKILLS,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    // console.log(response);
-                    return response.json();
-                })
-                .then(dataJson => {
-                    // console.log(dataJson);
-                    setSkillsList(dataJson);
-                })
-                .then(() => setState({...state, loading: false, error:null}));
+        let isMounted = true;
+        const getData = async () => {
+          try {
+              const response = await fetch(
+                  process.env.REACT_APP_SKILLS,
+                  {headers: {
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                  }}
+              );
+              if (isMounted) {
+                const dataJson = await response.json();
+                setSkillsList(dataJson);
+                setState({...state, loading: false, error:null});
+              }
+          } catch (err) {
+              setState({...state, loading: false, error:err});
+          }
         }
 
-        getData()
+
+        getData();
+        return () => {
+          isMounted = false;
+        };
     }, [state])
 
     return (

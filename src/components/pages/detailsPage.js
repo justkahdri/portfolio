@@ -12,30 +12,32 @@ function DetailsPage() {
     const [state, setState] = useState({loading: true, error: null});
     const [projectContent,setProjectContent] = useState([]);
 
-    // TODO function cleanup
+    // TODO function cleanup with Suspense, resource.read y Relay
     useEffect(() => {
-        const getData = () => {
-            fetch(process.env.REACT_APP_PROJECTS,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    // console.log(response);
-                    return response.json();
-                })
-                .then(allProjects => {
-                    // console.log(allProjects);
-                    setProjectContent(_.get(allProjects, projectId));
-                })
-                .then(() => setState({loading: false, error: null}))
-                .catch(err => setState({loading: false, error: err}));
-        }
+      let isMounted = true;
+      const getData = async () => {
+        try {
+          const response = await fetch(process.env.REACT_APP_PROJECTS,
+                   {
+                       headers: {
+                           'Content-Type': 'application/json',
+                           'Accept': 'application/json'
+                       }
+                   });
+          if (isMounted) {
+            const parsedJSON = await response.json();
+            setProjectContent(_.get(parsedJSON, projectId));
+            setState({loading: false, error: null});
+          }
+        } catch (err) {setState({loading: false, error: err});}
+      }
 
-        getData();
+      getData();
+      return () => {
+        isMounted = false;
+      };
     }, [projectId])
+
     return (
         state.loading ? <Loader/>
             :

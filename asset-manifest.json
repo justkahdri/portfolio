@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.2226bf5c.chunk.css",
+    "main.js": "/portfolio/static/js/main.8cd25b0f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.8cd25b0f.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.289793c7.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.289793c7.js.map",
+    "static/css/2.86ed8209.chunk.css": "/portfolio/static/css/2.86ed8209.chunk.css",
+    "static/js/2.140e9df4.chunk.js": "/portfolio/static/js/2.140e9df4.chunk.js",
+    "static/js/2.140e9df4.chunk.js.map": "/portfolio/static/js/2.140e9df4.chunk.js.map",
+    "static/js/3.a0a4fbc5.chunk.js": "/portfolio/static/js/3.a0a4fbc5.chunk.js",
+    "static/js/3.a0a4fbc5.chunk.js.map": "/portfolio/static/js/3.a0a4fbc5.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.86ed8209.chunk.css.map": "/portfolio/static/css/2.86ed8209.chunk.css.map",
+    "static/css/main.2226bf5c.chunk.css.map": "/portfolio/static/css/main.2226bf5c.chunk.css.map",
+    "static/js/2.140e9df4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.140e9df4.chunk.js.LICENSE.txt",
+    "static/media/comingsoon.css": "/portfolio/static/media/CSoon.d4e2ef5b.svg",
+    "static/media/projectsgallery.css": "/portfolio/static/media/bedroom-bg.82e9825b.jpg",
+    "static/media/bootstrap.png": "/portfolio/static/media/bootstrap.f132cb79.png",
+    "static/media/html5-css3-js.png": "/portfolio/static/media/html5-css3-js.caf6f207.png",
+    "static/media/logo.e6f27be2.png": "/portfolio/static/media/logo.e6f27be2.png",
+    "static/media/mysql.png": "/portfolio/static/media/mysql.9abb470b.png",
+    "static/media/node.png": "/portfolio/static/media/node.1041f6a6.png",
+    "static/media/notfound.css": "/portfolio/static/media/obiwan.9597026b.jpg",
+    "static/media/python.png": "/portfolio/static/media/python.f0c9d647.png",
+    "static/media/react.png": "/portfolio/static/media/react.d278d9a4.png",
+    "static/media/studio.172e970b.jpg": "/portfolio/static/media/studio.172e970b.jpg",
+    "static/media/sidearticle.css": "/portfolio/static/media/trip-bg.6240b5ec.jpg",
+    "static/media/projectdetails.css": "/portfolio/static/media/white-background.785c9ade.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.289793c7.js",
+    "static/css/2.86ed8209.chunk.css",
+    "static/js/2.140e9df4.chunk.js",
+    "static/css/main.2226bf5c.chunk.css",
+    "static/js/main.8cd25b0f.chunk.js"
+  ]
+}

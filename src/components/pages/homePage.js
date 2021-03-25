@@ -43,7 +43,7 @@ function HomePage() {
                     title: "Blog",
                     icon: "fas fa-paragraph",
                     custom: "btn-icon btn-green",
-                    href: "/blog"
+                    href: "/portfolio/blog"
                 }
             ]
         },
@@ -56,7 +56,7 @@ function HomePage() {
 
     const [ skillsList, setSkillsList ] = useState([]);
     let location = useLocation()
-    
+
     useEffect(() => {
         let isMounted = true;
         const getData = async () => {

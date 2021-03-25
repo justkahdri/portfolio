@@ -5,18 +5,18 @@ import './styles/header.css';
 
 const Header = () => {
     const sections = {
-        Projects: '/projects',
-        Blog: '/blog',
-        Contact: '/contact',
+        Projects: '/portfolio/projects',
+        Blog: '/portfolio/blog',
+        Contact: '/portfolio/contact',
     };
     const usePagePath = () => {
         let location = useLocation();
         return location.pathname;
     };
     const getTheme = path => {
-      if(path === '/contact' || path.startsWith('/projects/')) {
+      if(path === '/portfolio/contact' || path.startsWith('/portfolio/projects/')) {
         return 'navbar-light lighten';
-      } else if (path === '/blog') {
+      } else if (path === '/portfolio/blog') {
         return 'navbar-dark';
       } else {
         return 'navbar-dark opacity';
@@ -28,8 +28,8 @@ const Header = () => {
         <header id="header" className={"navbar navbar-expand-lg fixed-top justify-content-between " + getTheme(usePagePath())}>
             <div />
             <div className="container">
-                {usePagePath() === '/' ||
-                <Link className="navbar-brand" to="/">
+                {usePagePath() === '/portfolio/' ||
+                <Link className="navbar-brand" to={process.env.REACT_APP_PUBLIC_URL + "/"}>
                     Joaquín Montes
                 </Link>
                 }
@@ -43,7 +43,7 @@ const Header = () => {
                     <ul className="navbar-nav ml-auto">
                         {Object.entries(sections).map(([section, route]) => (
                             <li key={section} className="nav-item">
-                                <a className="nav-link" href={route}>{section}</a>
+                                <Link className="nav-link" to={route}>{section}</Link>
                             </li>
                         ))}
                     </ul>

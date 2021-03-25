@@ -9,10 +9,7 @@ import StyledButtons from '../UI/molecules/StyledButtons';
 
 import './styles/contactcontainer.css';
 
-const ContactContainer = props => {
-  const setNumber = value => {props.number = value;}
-
-  return (
+const ContactContainer = props => (
     <section id="contact--hero" className="row py-5">
         <ContactForm handleSubmit={props.handleSubmit}>
           <div className="form-row">
@@ -20,13 +17,13 @@ const ContactContainer = props => {
             <FormGroup custom='col-md-6' label='Last Name' name="lastName" register={props.register} error={props.errors.lastName} ph="Doe" type="text" required/>
           </div>
           <FormGroup label='Email' name="email" register={props.register} ph="example@email.com" type="email" error={props.errors.email} required/>
-          <PhoneInputGroup label='Phone' name="phone" handleChange={value => {setNumber(value)}}/>
+          <PhoneInputGroup label='Phone' name="phone" handleChange={value => {props.number(value)}}/>
           <TextAreaGroup label='Message' name="message" register={props.register} error={props.errors.message} ph="What would you like to chat about?"/>
           <StyledButtons label="Submit →" submit/>
         </ContactForm>
         <SideArticle {...props.sideSection}/>
     </section>
-  );
-}
+);
+
 
 export default ContactContainer;

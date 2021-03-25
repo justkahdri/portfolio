@@ -47,7 +47,7 @@ const DetailsContainer = ({content}) => {
                 {
                     title: "Other projects",
                     custom: "btn btn-outline-secondary",
-                    href: "/projects"
+                    href: "/portfolio/projects"
                 }
             ]
         },

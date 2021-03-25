@@ -15,7 +15,6 @@ function ContactPage() {
       cta: "Let me know!",
       salute: "I'd love to hear from you."
     },
-    number: '',
     sent: false,
     error: null,
     error_alert: {
@@ -23,6 +22,7 @@ function ContactPage() {
       message: 'An error ocurred while sending your message, try again later.'
     }
   });
+  const [number, setNumber] = React.useState('');
   let location = useLocation();
 
   const onSubmit = data => {
@@ -32,7 +32,7 @@ function ContactPage() {
       last_name: data.lastName,
       content: data.message,
       email: data.email,
-      phone: state.number,
+      phone: number,
     };
     emailjs
       .send("p_gmail", "portfolio_template", templateParams, process.env.REACT_APP_EMAILJS_ID)
@@ -52,7 +52,7 @@ function ContactPage() {
     state.sent
       ? <Redirect
             push to={{
-              pathname: "/",
+              pathname: "/portfolio/",
               search: "?sent=success",
               state: { referrer: location.pathname }
             }}
@@ -60,7 +60,7 @@ function ContactPage() {
 
     : <main role="main" id="contact-page" className="container">
         {state.error && <Alert {...state.error_alert}/>}
-        <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} number={state.number} sideSection={state.sideSection}/>
+        <ContactContainer register={register} handleSubmit={handleSubmit(onSubmit)} errors={errors} number={setNumber} sideSection={state.sideSection}/>
       </main>
   )
 }

@@ -5,18 +5,18 @@ import './styles/header.css';
 
 const Header = () => {
     const sections = {
-        Projects: '/portfolio/projects',
-        Blog: '/portfolio/blog',
-        Contact: '/portfolio/contact',
+        Projects: '/projects',
+        Blog: '/blog',
+        Contact: '/contact',
     };
     const usePagePath = () => {
         let location = useLocation();
         return location.pathname;
     };
     const getTheme = path => {
-      if(path === '/portfolio/contact' || path.startsWith('/portfolio/projects/')) {
+      if(path === '/contact' || path.startsWith('/projects/')) {
         return 'navbar-light lighten';
-      } else if (path === '/portfolio/blog') {
+      } else if (path === '/blog') {
         return 'navbar-dark';
       } else {
         return 'navbar-dark opacity';
@@ -28,8 +28,8 @@ const Header = () => {
         <header id="header" className={"navbar navbar-expand-lg fixed-top justify-content-between " + getTheme(usePagePath())}>
             <div />
             <div className="container">
-                {usePagePath() === '/portfolio/' ||
-                <Link className="navbar-brand" to={process.env.REACT_APP_PUBLIC_URL + "/"}>
+                {usePagePath() === '/' ||
+                <Link className="navbar-brand" to={"/"}>
                     Joaquín Montes
                 </Link>
                 }

@@ -43,7 +43,7 @@ function HomePage() {
                     title: "Blog",
                     icon: "fas fa-paragraph",
                     custom: "btn-icon btn-green",
-                    href: "/portfolio/blog"
+                    href: "/blog"
                 }
             ]
         },

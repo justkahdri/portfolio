@@ -10,7 +10,7 @@ function ComingSoon() {
         text_custom: "col-10 offset-1",
         cta: {
             custom: "btn-primary",
-            href: "/portfolio/projects",
+            href: "/projects",
             title: "Portfolio",
         }
     }

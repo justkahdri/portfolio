@@ -5,7 +5,6 @@ import MainArticle from "../UI/molecules/MainArticle";
 import ArticleListing from "../UI/molecules/ArticleListing";
 import IconButtons from "../UI/molecules/IconButtons";
 import Attributions from "../UI/atoms/Attributions";
-import Carousel from "../UI/organisms/Carousel";
 
 import './styles/projectdetails.css';
 
@@ -47,7 +46,7 @@ const DetailsContainer = ({content}) => {
                 {
                     title: "Other projects",
                     custom: "btn btn-outline-secondary",
-                    href: "/portfolio/projects"
+                    href: "/projects"
                 }
             ]
         },
@@ -63,13 +62,14 @@ const DetailsContainer = ({content}) => {
 
                 {content.screenshots &&
                     <article className="row">
-                        {/* FIXME Carousel height variation
-                            https://stackoverflow.com/questions/33685259/stretch-and-fill-image-in-bootstrap-carousel */}
                         <h2 className="col-12 text-right">{state.gallery.title}</h2>
                         {content.screenshots.length === 1 ?
                             <img src={content.screenshots[0].source} className="img-fluid" alt={content.screenshots[0].alt}/>
                             :
-                            <Carousel content={content.screenshots} custom="col-12"/>
+                            <div className="details--masonry">
+                                {content.screenshots.map(({source, alt}) => <img key={alt} src={source} className="masonry" alt={alt} />)}
+                            </div>
+                            // <Carousel content={content.screenshots} custom="col-12"/>
                         }
                     </article>
                 }

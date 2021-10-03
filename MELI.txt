@@ -1,0 +1,32 @@
+,"mercadolibre-details-challenge": {
+    "title": "MELI Details Challenge",
+    "description": "Small clone of MercadoLibre product details page",
+    "thumbnail": "https://www.imscorporate.com/wp-content/uploads/2018/07/mercadolibre-logo2.jpg",
+    "thechnologies": {
+      "React": "badge-info",
+      "TS": "badge-info",
+      "Chakra-UI": "badge-info"
+    },
+    "category": "Single Page App",
+    "date": "May 2021",
+    "introduction": [
+      "This project is a Mercado Libre clone, based on challenge from Github.",
+      "For now, it consist in a simple product details page with almost same visuals that the original website. The page allows to publish questions (that aren't saved anywere) and to filter between product reviews."
+    ],
+    "learned": {
+      "p": [
+        "Doing this app I become more used to work with TypeScrit and discovered the power of Chakra UI, a great component library for React applications. Additionally, making some of the features I learned several concepts and libraries:"
+      ],
+      "l": [
+        "App context with React",
+        "React Icons",
+        "Theme customization with Chakra"
+      ]
+    },
+    "repository": "https://github.com/justkahdri/mercadolibre-details-challenge",
+    "demo": "https://justmeli.netlify.app/",
+    "attribution": [
+      "Thumbnail from Mercado Libre",
+      "http://ux.mercadolibre.com/"
+    ]
+  }

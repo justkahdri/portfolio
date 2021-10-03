@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -13,22 +13,20 @@ import NotFound from './components/pages/notFound';
 
 function App() {
     // TODO use Hooks (History & useParams)
-
-    const fullUrl = path => {return (process.env.REACT_APP_PUBLIC_URL + path)};
     return (
-        <BrowserRouter>
+        <HashRouter basename="/">
                 <Layout>
                     <Switch>
-                        <Route exact path={fullUrl('/')} component={HomePage} />
-                        <Route exact path={fullUrl('/contact')} component={ContactPage} />
-                        <Route exact path={fullUrl('/projects')} component={ProjectsPage} />
-                        <Route exact path={fullUrl('/projects/:projectId')} component={DetailsPage} />
-                        <Route exact path={fullUrl('/blog')} component={ComingSoon} />
-                        <Route exact path={fullUrl('/blog/:postId')} component={ComingSoon} />
+                        <Route exact path={'/'} component={HomePage} />
+                        <Route exact path={'/contact'} component={ContactPage} />
+                        <Route exact path={'/projects'} component={ProjectsPage} />
+                        <Route exact path={'/projects/:projectId'} component={DetailsPage} />
+                        <Route exact path={'/blog'} component={ComingSoon} />
+                        <Route exact path={'/blog/:postId'} component={ComingSoon} />
                         <Route component={NotFound} />
                     </Switch>
                 </Layout>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 

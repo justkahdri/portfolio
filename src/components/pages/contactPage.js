@@ -52,7 +52,7 @@ function ContactPage() {
     state.sent
       ? <Redirect
             push to={{
-              pathname: "/portfolio/",
+              pathname: "/",
               search: "?sent=success",
               state: { referrer: location.pathname }
             }}

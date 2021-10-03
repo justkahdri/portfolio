@@ -4,3 +4,23 @@
     background: url('../../../assets/images/white-background.jpg');
     background-size: 100vw;
 }
+
+.details--masonry {
+    column-count: 2;
+    column-width: 500px;
+}
+
+@media only screen and (min-width: 601px){
+    /*Tablets [601px -> 1200px]*/
+    .details--masonry {
+        column-count: 4;
+        column-width: 900px;
+    }
+}
+
+
+img.masonry {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+}

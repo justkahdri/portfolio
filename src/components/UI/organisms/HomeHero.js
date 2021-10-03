@@ -11,12 +11,12 @@ const HomeHero = (props) => {
         {
             title: "Contact",
             custom: "btn-outline-light",
-            href: process.env.REACT_APP_PUBLIC_URL + "/contact"
+            href: "/contact"
         },
         {
             title: "View Projects",
             custom: "btn-primary",
-            href: process.env.REACT_APP_PUBLIC_URL + "/projects"
+            href: "/projects"
         }
     ];
 

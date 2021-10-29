@@ -47,7 +47,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Joaquín R. Montes - [@JoacoMontes5](https://twitter.com/JoacoMontes5)
+Joaquín R. Montes - [@justkahdri](https://twitter.com/justkahdri) on Twitter
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://justkahdri.netlify.app/#/">
+  <a href="https://justkahdri.github.io/portfolio">
     <img src="src/assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -14,9 +14,9 @@
   <h5 align="center">Personal Portfolio</h5>
 
   <p align="center">
-    <a href="https://justkahdri.netlify.app/#/">View Demo</a>
+    <a href="https://justkahdri.github.io/portfolio/">View Demo</a>
     ·
-    <a href="https://justkahdri.netlify.app/#/contact">Contact Me</a>
+    <a href="https://justkahdri.github.io/portfolio/#/contact">Contact Me</a>
   </p>
 </p>
 
